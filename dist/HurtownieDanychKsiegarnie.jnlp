@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="HurtownieDanychKsiegarnie.jnlp">
+  <information>
+    <title>HurtownieDanychKsiegarnie</title>
+    <vendor>daniel</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="HurtownieDanychKsiegarnie.jar" size="16232" download="eager" />
+    <jar href="lib\postgresql-9.4.1207.jre6.jar" size="607649" download="eager" />
+    <jar href="lib\weka3_8.jar" size="10997325" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="HurtownieDanychKsiegarnie" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="hurtowniedanych.HurtownieDanychKsiegarnie"  name="HurtownieDanychKsiegarnie" />
+  <update check="always"/>
+</jnlp>

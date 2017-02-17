@@ -1,0 +1,48 @@
+CREATE TABLE Klienci
+(
+id_osoba serial not null,
+imie varchar(20),
+nazwisko varchar(30),
+email varchar(30),
+telefon varchar(9),
+wiek int,
+primary key (id_osoba)
+);
+
+CREATE TABLE Ksiazki
+(
+id_miasto serial not null,
+nazwa varchar(20),
+wojewodztwo varchar(30),
+l_mieszkancow int,
+primary key (id_miasto)
+);
+
+CREATE TABLE Daty
+(
+id_data serial not null,
+dzien int,
+miesiac int,
+rok int,
+primary key (id_data)
+);
+
+CREATE TABLE Ksiegarnie
+(
+id_silownia serial not null,
+id_miasto int references Miasta(id_miasto),
+l_mijesc int,
+primary key (id_silownia)
+);
+
+
+
+CREATE TABLE ZAkupy
+(
+id_transakcja serial not null,
+id_osoba int references Osoby(id_osoba),
+id_silownia int references Silownie(id_silownia),
+id_karnet int references Karnety(id_karnet),
+id_data int references Daty(id_data),
+primary key (id_transakcja)
+);
